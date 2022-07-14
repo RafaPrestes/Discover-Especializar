@@ -9,7 +9,7 @@ function getUsers() {
     .catch(error => console.error(error))
 }
 
-//GET com parametros
+//GET com parâmetros
 function getUser(id){
     axios.get(`${url}/${id}`)
     .then(response => {
