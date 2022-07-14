@@ -57,7 +57,7 @@ function deleteUser(id) {
 
 //Chamando Funções
 getUsers()
-getUser(3)
-deleteUser(6)
+getUser(1)
+// deleteUser(6)
 // updateUser(3, userUpdated)
 // addUser(newUser)
