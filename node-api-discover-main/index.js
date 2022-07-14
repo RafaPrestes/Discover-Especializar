@@ -16,11 +16,12 @@ let users = [{
   city: "São Paulo"
 }]
 
-
+//GET
 app.route('/api').get((req, res) => res.json({
   users
 }))
 
+//GET com Parâmetros
 app.route('/api/:id').get((req, res) => {
   const userId = req.params.id
 
@@ -33,6 +34,7 @@ app.route('/api/:id').get((req, res) => {
   res.json(user)
 })
 
+//POST
 app.route('/api').post((req, res) => {
   const lastId = users[users.length - 1].id
   users.push({
@@ -44,6 +46,7 @@ app.route('/api').post((req, res) => {
   res.json('Saved user')
 })
 
+//PUT
 app.route('/api/:id').put((req, res) => {
   const userId = req.params.id
 
@@ -70,6 +73,7 @@ app.route('/api/:id').put((req, res) => {
   res.json("Updated user")
 })
 
+//DELETE
 app.route('/api/:id').delete((req, res) => {
   const userId = req.params.id
 
