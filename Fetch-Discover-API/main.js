@@ -35,7 +35,6 @@ function addUser(newUser) {
     .then(data => alertAPI.textContent = data)
     .catch(error => console.error(error))
 }
-
 const newUser = {
     name: "Rafael Prestes",
     avatar: "https://avatars.githubusercontent.com/u/64441986?v=4",
@@ -55,7 +54,6 @@ function updateUser(updatedUser, id) {
     .then(data => alertAPI.textContent = data)
     .catch(error => console.error(error))
 }
-
 const updatedUser = {
     name: "Luis Carlos",
     avatar: "https://picsum.photos/200/300/",
