@@ -9,7 +9,7 @@ function getUsers() {
     .catch(error => console.error(error))
 }
 
-//GET com parametro
+//GET com parâmetro
 function getUser(id) {
     fetch(`${url}/${id}`) //pegando o id 1 da api
     .then(response => (response.json())) //retorna na tela o JSON
