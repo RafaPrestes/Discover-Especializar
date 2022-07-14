@@ -7,7 +7,7 @@
     "start": "nodemon ."
   },
   "keywords": [],
-  "author": "Rafael Prestes",
+  "author": "Jakeliny Gracielly",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
