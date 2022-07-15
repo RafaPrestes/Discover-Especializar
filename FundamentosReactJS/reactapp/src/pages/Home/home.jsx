@@ -5,13 +5,18 @@ import React, {useState, useEffect} from 'react'
 
 export default function Home() {
   //studentName é o valor armazenado, e o setStudentName a função que atualiza o estado
-  const [studentName, setStudentName] = useState();
+  const [studentName, setStudentName] = useState('');
   //criamos um novo estado que vai armazenar os estudantes dentro de um array
   const [students, setStudents] = useState([])
   //criando um novo useState para consumir a API do github, passando nome e a foto
   const [user, setUser] = useState({ name: '', avatar: ''})
 
-  function handleAddStudent() {
+  function handleAddStudent() {  
+    if(studentName === '') {
+      alert("Campo de nome vazio, favor preencher")
+      newStudent = false;
+    }
+
     const newStudent = {
       name: studentName,
       time: new Date().toLocaleTimeString("pt-br", {
@@ -20,7 +25,6 @@ export default function Home() {
         second: '2-digit'
       })
     }
-
     //setando os estudantes (usado o parametro prevState nessa estrutura para pegar os antigos e armazenar junto dos novos)
     setStudents(prevState => [...prevState, newStudent])
   }
