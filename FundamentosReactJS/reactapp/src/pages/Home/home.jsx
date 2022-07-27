@@ -14,19 +14,19 @@ export default function Home() {
   function handleAddStudent() {  
     if(studentName === '') {
       alert("Campo de nome vazio, favor preencher")
-      newStudent = false;
     }
-
-    const newStudent = {
-      name: studentName,
-      time: new Date().toLocaleTimeString("pt-br", {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      })
+    else {
+      const newStudent = {
+        name: studentName,
+        time: new Date().toLocaleTimeString("pt-br", {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        })    
+      }
+      //setando os estudantes (usado o parametro prevState nessa estrutura para pegar os antigos e armazenar junto dos novos)
+      setStudents(prevState => [...prevState, newStudent])     
     }
-    //setando os estudantes (usado o parametro prevState nessa estrutura para pegar os antigos e armazenar junto dos novos)
-    setStudents(prevState => [...prevState, newStudent])
   }
   
   useEffect(() => {
